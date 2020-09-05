@@ -80,8 +80,3 @@ Added worklog 25m: https://ancientgaming.atlassian.net/secure/RapidBoard.jspa?ra
 
 Derived from:
 https://github.com/futjikato/futjitrack
-{
-"host": "ancientgaming",
-"user": "lapido@gmail.com",
-"pass": "tWLBxvvbjw0z1tnY0jKbD307"
-}
