@@ -1,0 +1,51 @@
+{
+  "_from": "jtt",
+  "_id": "jtt@1.1.3",
+  "_inBundle": false,
+  "_integrity": "sha1-XOON41W9D3UW6DZP8iyeBVLKcfE=",
+  "_location": "/jtt",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jtt",
+    "name": "jtt",
+    "escapedName": "jtt",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/jtt/-/jtt-1.1.3.tgz",
+  "_shasum": "5ce38de355bd0f7516e8364ff22c9e0552ca71f1",
+  "_spec": "jtt",
+  "_where": "C:\\Users\\lapid\\Gitlab\\AncientGames",
+  "bin": {
+    "jtt": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/ruairispain/jtt/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "got": "^8.0.1",
+    "inquirer": "^4.0.1",
+    "moment": "^2.19.4",
+    "moment-duration-format": "^2.0.1",
+    "yargs": "^10.0.3"
+  },
+  "deprecated": false,
+  "description": "Jira cloud time tracking in cli",
+  "homepage": "https://github.com/ruairispain/jtt#readme",
+  "license": "MIT",
+  "name": "jtt",
+  "private": false,
+  "repository": {
+    "url": "git+https://github.com/ruairispain/jtt.git",
+    "type": "git"
+  },
+  "version": "1.1.3"
+}
