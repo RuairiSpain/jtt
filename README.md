@@ -42,6 +42,14 @@ jtt fix BE-46 180                     Reset time for issue BE-46, set the time t
 jtt up                                Upload all timers to Jira, if successful the local timers are cleared
 ```
 
+If you are in a git repository directory, jjt can read the git branch name, and use the get prefix as the Jira issue number. So for example, if your current git banch name is `FE-199-doing-cool-stuff`. Then you can shorten the command to `jjt t` and this will stop/start the timer for issue `FE-199`. More shorthand examples:
+
+```
+jtt t 30      // Stops or starts the timer and adds 30 minutes to the current Jira ticket, using the git branch prefix
+jtt fix 180   // Reset the current timer to 180 minutes for the current Jira ticket, using the git branch prefix
+
+```
+
 Example workflow:
 
 ```

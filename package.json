@@ -35,6 +35,7 @@
     "inquirer": "^4.0.1",
     "moment": "^2.19.4",
     "moment-duration-format": "^2.0.1",
+    "util": "^0.12.3",
     "yargs": "^10.0.3"
   },
   "deprecated": false,
