@@ -35,10 +35,11 @@ jtt auth <domain> <email> <token>     Set and save authentication
 jtt status                            Print authentication details
 jtt p                                 List projects
 jtt i FE                              List open issues in FE project that are assigned to you
-jtt ls                                List work logs saved in jira
 jtt ls FE-123                         List work logs saved for issue FE-123
-jtt log FE-123 15                     Log 15 minutes in jira to issue FE-123
-jtt log BE-46 180 "Added cool stuff"  Log 90 minutes to issue FE-123 and attach a comment to jira
+jtt t FE-123                          Start/stop a timer for FE-123, first time timer is set to 15 minutes
+jtt t FE-123 5                        Start/stop a timer for FE-123 and add 5 minutes to the tracker
+jtt fix BE-46 180                     Reset time for issue BE-46, set the time to 3 hours
+jtt up                                Upload all timers to Jira, if successful the local timers are cleared
 ```
 
 Example workflow:
@@ -73,8 +74,39 @@ BE-119  Dice Provably Fair RNG is not fairly distributed
 BE-19   Automatic Box Price Adjustment
 BE-77   Make TradeBots decline offers after random wait time
 
-$ jtt log BE-119 25 "Making Jira time tracker for team :)"
-Added worklog 25m: https://ancientgaming.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=BE&modal=detail&selectedIssue=BE-119&search=BE-119
+$ jtt t BE-5
+Trackers (3)
+         BE-5    369 minutes    ON
+         FE-188  8 minutes      OFF
+         FE-249  421 minutes    OFF
+Reminder to save: "jtt up"
+
+$ jtt t BE-5
+Trackers (3)
+         BE-5    370 minutes    OFF
+         FE-188  8 minutes      OFF
+         FE-249  421 minutes    OFF
+
+Reminder to save: "jtt up"
+
+$ jtt up
+Trackers (3)
+         BE-5    370 minutes    OFF
+         FE-188  8 minutes      OFF
+         FE-249  421 minutes    OFF
+
+Reminder to save: "jtt up"
+Added 6h 10m to https://ancientgaming.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=BE&modal=detail&selectedIssue=BE-5&search=BE-5
+Added 8m to https://ancientgaming.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=FE&modal=detail&selectedIssue=FE-188&search=FE-188
+Added 7h 1m to https://ancientgaming.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=FE&modal=detail&selectedIssue=FE-249&search=FE-249
+
+Done.
+
+$ jtt status
+Authentication details:
+Jira: ancientgaming
+User: lapido@gmail.com
+Trackers (0)
 
 ```
 
